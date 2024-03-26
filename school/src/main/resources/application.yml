@@ -17,3 +17,6 @@ spring:
     mongodb:
       uri: mongodb://localhost:27017/schools
 
+application:
+  config:
+    students-url: http://localhost:8222/api/students

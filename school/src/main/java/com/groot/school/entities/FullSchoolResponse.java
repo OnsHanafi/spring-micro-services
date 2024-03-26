@@ -1,23 +1,19 @@
 package com.groot.school.entities;
 
 import lombok.*;
-import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.io.Serializable;
+import java.util.List;
 
-@Document
-@Data
+
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class School implements Serializable {
+public class FullSchoolResponse {
 
-    @Id
-    private Integer id;
     private String name;
     private String email;
-
+    private List<Student> students;
 }
