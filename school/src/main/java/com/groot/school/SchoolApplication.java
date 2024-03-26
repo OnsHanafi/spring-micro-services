@@ -1,13 +1,13 @@
-package com.groot.student;
+package com.groot.school;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class StudentApplication {
+public class SchoolApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(StudentApplication.class, args);
+        SpringApplication.run(SchoolApplication.class, args);
     }
 
 }
