@@ -3,10 +3,8 @@ package com.groot.school.services;
 import com.groot.school.client.StudentClient;
 import com.groot.school.entities.FullSchoolResponse;
 import com.groot.school.entities.School;
-import com.groot.school.entities.Student;
 import com.groot.school.repositories.SchoolRepository;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
+
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
