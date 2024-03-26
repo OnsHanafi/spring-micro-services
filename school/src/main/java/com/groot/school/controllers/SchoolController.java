@@ -1,5 +1,6 @@
 package com.groot.school.controllers;
 
+import com.groot.school.entities.FullSchoolResponse;
 import com.groot.school.entities.School;
 import com.groot.school.services.SchoolService;
 import lombok.RequiredArgsConstructor;
@@ -18,13 +19,19 @@ public class SchoolController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public void setStudent(@RequestBody School school) {
+    public void setSchool(@RequestBody School school) {
         this.schoolService.saveSchool(school);
     }
 
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
-    public ResponseEntity<List<School>> setSchool() {
+    public ResponseEntity<List<School>> getSchool() {
         return ResponseEntity.ok(this.schoolService.findAllSchools());
+    }
+
+    @GetMapping("/with-students/{school-id}")
+    @ResponseStatus(HttpStatus.OK)
+    public ResponseEntity<FullSchoolResponse> setSchoolwithStudents(@PathVariable("school-id") Integer schoolId) {
+        return ResponseEntity.ok(this.schoolService.findSchoolsWithStudents(schoolId));
     }
 }

@@ -12,6 +12,7 @@ import java.io.Serializable;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class School implements Serializable {
 
     @Id
