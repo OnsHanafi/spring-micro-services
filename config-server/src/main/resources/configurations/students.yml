@@ -15,3 +15,8 @@ spring:
     mongodb:
       uri: mongodb://localhost:27017/students
 
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+
